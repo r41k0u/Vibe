@@ -18,4 +18,5 @@ shape = SubResource( 1 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 1 )
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
