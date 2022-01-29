@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ellipse 4.png-f58d0d41f5204a773eced29ccb008762.stex"
+path="res://.import/Ellipse 4.png-a1630f93f3ad7cfdab89905f01143027.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ellipse 4.png"
-dest_files=[ "res://.import/Ellipse 4.png-f58d0d41f5204a773eced29ccb008762.stex" ]
+source_file="res://assets/images/Ellipse 4.png"
+dest_files=[ "res://.import/Ellipse 4.png-a1630f93f3ad7cfdab89905f01143027.stex" ]
 
 [params]
 

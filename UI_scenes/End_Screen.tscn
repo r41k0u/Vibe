@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://inner.svg" type="Texture" id=2]
-[ext_resource path="res://Frame 1.svg" type="Texture" id=3]
-[ext_resource path="res://End_Screen.gd" type="Script" id=4]
+[ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/inner.svg" type="Texture" id=2]
+[ext_resource path="res://assets/images/Frame 1.svg" type="Texture" id=3]
+[ext_resource path="res://UI_scenes/End_Screen.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
