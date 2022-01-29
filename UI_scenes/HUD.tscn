@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://UI_scenes/HUD.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 17
+extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="HUD" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="SCORE" type="Node2D" parent="."]
+
+[node name="YOURSCORE" type="Label" parent="SCORE"]
+margin_left = -562.0
+margin_top = -278.0
+margin_right = -423.0
+margin_bottom = -256.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SCORE:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="SCORE"]
+margin_left = -412.0
+margin_top = -278.0
+margin_right = -312.0
+margin_bottom = -256.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TIMER" type="Node2D" parent="."]
+
+[node name="ZONESTARTSIN" type="Label" parent="TIMER"]
+margin_left = 303.0
+margin_top = -277.0
+margin_right = 475.0
+margin_bottom = -255.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ZONE STARTS IN"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Label" parent="TIMER"]
+margin_left = 278.0
+margin_top = -242.0
+margin_right = 378.0
+margin_bottom = -204.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "30"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SECONDS" type="Label" parent="TIMER"]
+margin_left = 328.0
+margin_top = -242.0
+margin_right = 482.0
+margin_bottom = -204.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SECONDS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513, 302 )

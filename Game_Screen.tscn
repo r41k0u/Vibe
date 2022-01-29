@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game_Screen.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=6]
 [ext_resource path="res://scripts/Visualizer.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Emitter.gd" type="Script" id=8]
+[ext_resource path="res://UI_scenes/HUD.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/music/collidemp3.mp3" type="AudioStream" id=10]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -60,6 +62,12 @@ position = Vector2( 508, 319 )
 script = ExtResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Circle" type="Sprite" parent="."]
+position = Vector2( 521, 365 )
+texture = ExtResource( 4 )
 
 [node name="Emitter" type="Node2D" parent="."]
 script = ExtResource( 8 )
@@ -69,3 +77,5 @@ position = Vector2( 513, 302 )
 rotating = true
 current = true
 script = ExtResource( 6 )
+
+[node name="HUD" parent="." instance=ExtResource( 9 )]
