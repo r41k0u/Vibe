@@ -12,7 +12,12 @@ func _ready():
 	items_to_center.append($Player)
 	items_to_center.append($Center)
 	items_to_center.append($Invert)
+	items_to_center.append($Visualizer)
+	items_to_center.append($Emitter)
 	window_size = get_viewport().size
+	for item in items_to_center:
+		item.position.x = window_size.x/2
+		item.position.y = window_size.y/2
 	pass # Replace with function body.
 
 func _process(delta):

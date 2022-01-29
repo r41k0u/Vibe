@@ -43,5 +43,6 @@ func _process(delta):
 		#global_position - $Player_motif.global_position
 		pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+func player_hit():
+	print("lagi")
 #	pass
