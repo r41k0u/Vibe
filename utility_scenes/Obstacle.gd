@@ -37,6 +37,8 @@ func _process(delta):
 	### RESPONSIVE KA CODE ENDS
 	scale.x = lerp(scale.x, 1, 0.03)
 	scale.y = lerp(scale.y, 1, 0.03)
+	if(position.x > window_size.x && position.y > window_size.y):
+		queue_free()
 	if(!hit):
 		position += velocity*delta
 	pass
