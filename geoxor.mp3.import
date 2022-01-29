@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/geoxor.mp3-c8a086578f3e053542c70973bc136e9d.mp3str"
+
+[deps]
+
+source_file="res://geoxor.mp3"
+dest_files=[ "res://.import/geoxor.mp3-c8a086578f3e053542c70973bc136e9d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
