@@ -9,7 +9,7 @@
 [ext_resource path="res://scripts/Visualizer.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Emitter.gd" type="Script" id=8]
 [ext_resource path="res://UI_scenes/HUD.tscn" type="PackedScene" id=9]
-[ext_resource path="res://geoxor.mp3" type="AudioStream" id=10]
+[ext_resource path="res://ephemeral.mp3" type="AudioStream" id=10]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
