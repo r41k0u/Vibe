@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/images/circle.png" type="Texture" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.403727, 1 )
+colors = PoolColorArray( 0, 0, 0, 0.0352941, 1, 1, 1, 1, 1, 1, 1, 0.133333 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 5, 5, 5 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.5
+scale_random = 0.11
+color_ramp = SubResource( 2 )
+
+[node name="Impact" type="Particles2D"]
+emitting = false
+amount = 10
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.83
+process_material = SubResource( 3 )
+texture = ExtResource( 1 )

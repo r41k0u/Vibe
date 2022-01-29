@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/images/inner.svg" type="Texture" id=2]
+[ext_resource path="res://assets/images/Frame 1.svg" type="Texture" id=3]
+[ext_resource path="res://UI_scenes/End_Screen.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+extra_spacing_char = 16
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 43
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 17
+extra_spacing_char = 2
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[node name="End_Screen" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="circles" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="circles"]
+margin_left = -216.294
+margin_top = -216.294
+margin_right = 583.706
+margin_bottom = 583.706
+rect_scale = Vector2( 0.541, 0.541 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="circles"]
+margin_left = -307.288
+margin_top = -307.288
+margin_right = 492.712
+margin_bottom = 492.712
+rect_scale = Vector2( 0.768, 0.768 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="circles"]
+margin_left = -387.356
+margin_top = -387.356
+margin_right = 412.644
+margin_bottom = 412.644
+rect_scale = Vector2( 0.968, 0.968 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="circles"]
+margin_left = -459.309
+margin_top = -459.309
+margin_right = 340.691
+margin_bottom = 340.691
+rect_scale = Vector2( 1.148, 1.148 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="circles"]
+margin_left = -532.344
+margin_top = -532.344
+margin_right = 267.656
+margin_bottom = 267.656
+rect_scale = Vector2( 1.331, 1.331 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Node2D" parent="."]
+
+[node name="GAMEOVER" type="Label" parent="Name"]
+margin_left = -146.5
+margin_top = -120.0
+margin_right = 146.5
+margin_bottom = -67.0
+theme = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "GAME OVER"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YOURSCORE" type="Label" parent="Name"]
+margin_left = -100.0
+margin_top = -26.0
+margin_right = 39.0
+margin_bottom = -4.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "YOUR SCORE:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="Name"]
+margin_left = 50.0
+margin_top = -26.0
+margin_right = 150.0
+margin_bottom = -4.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HIGHSCORE" type="Label" parent="Name"]
+margin_left = -100.0
+margin_top = 15.0
+margin_right = 39.0
+margin_bottom = 37.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "HIGHSCORE:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="highscore" type="Label" parent="Name"]
+margin_left = 50.0
+margin_top = 15.0
+margin_right = 150.0
+margin_bottom = 37.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "200"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 513, 302 )
+
+[node name="BUTTON" type="Node2D" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="BUTTON"]
+margin_left = -53.262
+margin_top = 84.132
+margin_right = 143.738
+margin_bottom = 140.132
+rect_scale = Vector2( 0.541, 0.541 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
