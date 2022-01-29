@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ephemeral.mp3-78f43b8282fa3635a07acfe2df0f302f.mp3str"
+
+[deps]
+
+source_file="res://ephemeral.mp3"
+dest_files=[ "res://.import/ephemeral.mp3-78f43b8282fa3635a07acfe2df0f302f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
