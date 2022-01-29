@@ -9,7 +9,7 @@
 [ext_resource path="res://scripts/Visualizer.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Emitter.gd" type="Script" id=8]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 render_mode unshaded;
 
@@ -34,7 +34,7 @@ void fragment()
 "
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = SubResource( 3 )
 
 [node name="Game_Screen" type="Node2D"]
 script = ExtResource( 2 )
