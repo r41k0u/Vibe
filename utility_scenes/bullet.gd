@@ -9,13 +9,14 @@ var velocity = Vector2(0, 0)
 var hit = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	connect("body_entered", self, "_on_Area2D_body_entered")
 	pass # Replace with function body.
 
 func _process(delta):
 	if(!hit):
 		position.x += velocity.x*delta
 		position.y += velocity.y*delta
+	elif(!$Impact.emitting):
+		queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -27,6 +28,4 @@ func _on_Area2D_body_entered(body):
 		hit = true
 		$Impact.emitting = true
 		$Bullet.visible = false
-		yield(get_tree().create_timer(3.0), "timeout")
-		queue_free()
 	pass # Replace with function body.

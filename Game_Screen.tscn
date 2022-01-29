@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game_Screen.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://scripts/Camera2D.gd" type="Script" id=6]
 [ext_resource path="res://scripts/Visualizer.gd" type="Script" id=7]
 [ext_resource path="res://scripts/Emitter.gd" type="Script" id=8]
+[ext_resource path="res://HUD.gd" type="Script" id=10]
+[ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -35,6 +37,22 @@ void fragment()
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 17
+extra_spacing_char = 2
+font_data = ExtResource( 11 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 11 )
 
 [node name="Game_Screen" type="Node2D"]
 script = ExtResource( 2 )
@@ -69,3 +87,74 @@ position = Vector2( 513, 302 )
 rotating = true
 current = true
 script = ExtResource( 6 )
+
+[node name="HUD" type="Node2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="SCORE" type="Node2D" parent="HUD"]
+
+[node name="YOURSCORE" type="Label" parent="HUD/SCORE"]
+margin_left = -54.0
+margin_top = 9.0
+margin_right = 85.0
+margin_bottom = 31.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "SCORE:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="HUD/SCORE"]
+margin_left = 96.0
+margin_top = 9.0
+margin_right = 196.0
+margin_bottom = 31.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TIMER" type="Node2D" parent="HUD"]
+
+[node name="ZONESTARTSIN" type="Label" parent="HUD/TIMER"]
+margin_left = -184.0
+margin_top = 6.0
+margin_right = -12.0
+margin_bottom = 28.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "ZONE STARTS IN"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timer" type="Label" parent="HUD/TIMER"]
+margin_left = -209.0
+margin_top = 41.0
+margin_right = -109.0
+margin_bottom = 79.0
+theme = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "30"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SECONDS" type="Label" parent="HUD/TIMER"]
+margin_left = -159.0
+margin_top = 41.0
+margin_right = -5.0
+margin_bottom = 79.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "SECONDS"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
