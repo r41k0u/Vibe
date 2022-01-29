@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var min_delay = 1
+export var min_delay = 0
 export var max_delay = 1
 var delay = 2
 var obstacle = preload("res://utility_scenes/Obstacle.tscn")

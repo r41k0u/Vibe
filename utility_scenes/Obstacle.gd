@@ -1,8 +1,8 @@
 extends Node2D
 
 
-const MIN_SPEED = 10
-const MAX_SPEED = 50
+const MIN_SPEED = 30
+const MAX_SPEED = 80
 
 var window_size
 var velocity = Vector2(0, -20)
@@ -44,6 +44,10 @@ func _process(delta):
 	pass
 	
 func on_hit():
+	if not hit:
+		if(GameState.mode == GameState.SHOOT):
+			GameState.obstacle_shot()
+		hit = true
 	queue_free()
 	pass
 

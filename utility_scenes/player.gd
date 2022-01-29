@@ -7,8 +7,11 @@ extends Node2D
 export var MAX_ORBIT_VELOCITY = 2
 export var ORBITAL_ACCEL = 0.05
 export var BULLET_COOLDOWN = 0.05
+
 var bullet_time = 0
 var orbit_velocity = 0
+var lives = 3
+
 var bullet = preload("res://utility_scenes/bullet.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -44,5 +47,8 @@ func _process(delta):
 		pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func player_hit():
-	print("lagi")
+	if GameState.mode == GameState.COLLECT:
+		GameState.obstacle_shot()
+	else:
+		GameState.player_hit()
 #	pass

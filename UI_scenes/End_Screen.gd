@@ -9,6 +9,8 @@ var window_size
 var items_to_center = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Name/score.text = str(GameState.score)
+	$Name/highscore.text = str(GameState.highscore)
 	items_to_center.append($circles)
 	items_to_center.append($Name)
 	items_to_center.append($BUTTON)
@@ -26,6 +28,8 @@ func _process(delta):
 		for item in items_to_center:
 			item.position.x = window_size.x/2
 			item.position.y = window_size.y/2
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

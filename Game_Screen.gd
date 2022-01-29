@@ -9,6 +9,7 @@ var window_size
 var items_to_center = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameState.score = 0
 	items_to_center.append($Player)
 	items_to_center.append($Center)
 	items_to_center.append($Invert)
