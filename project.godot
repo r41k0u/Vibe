@@ -14,6 +14,10 @@ config/name="Vibe"
 run/main_scene="res://Game_Screen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameState="*res://scripts/game_state.gd"
+
 [input]
 
 left={

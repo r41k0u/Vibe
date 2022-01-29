@@ -6,12 +6,13 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 3 )
+ORBITAL_ACCEL = 0.1
 
 [node name="Player_motif" type="Sprite" parent="."]
-position = Vector2( 0, 165 )
+position = Vector2( 0, 237 )
 scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 2 )
 
 [node name="Orbit" type="Sprite" parent="."]
-scale = Vector2( 0.35, 0.35 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )

@@ -16,6 +16,14 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	### TEST CODE
+	
+	if(Input.is_action_just_pressed("ui_down")):
+		GameState.start_collect_mode()
+	elif(Input.is_action_just_pressed("ui_up")):
+		GameState.start_shoot_mode()
+	
+	### TEST CODE ENDS
 	if(Input.is_action_pressed("left")):
 		orbit_velocity = lerp(orbit_velocity, MAX_ORBIT_VELOCITY, ORBITAL_ACCEL)
 	elif(Input.is_action_pressed("right")):
