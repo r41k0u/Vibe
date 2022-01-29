@@ -45,7 +45,7 @@ MAX_ORBIT_VELOCITY = 4
 ORBITAL_ACCEL = 0.01
 
 [node name="Center" parent="." instance=ExtResource( 3 )]
-position = Vector2( 508, 322 )
+position = Vector2( 508, 323 )
 
 [node name="Invert" type="Sprite" parent="."]
 material = SubResource( 2 )

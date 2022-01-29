@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/[MP3DOWNLOAD.TO] Undertale - Megalovania-HQ.wav-20b3bb45bbaf4a66020321469c6638a1.sample"
+
+[deps]
+
+source_file="res://[MP3DOWNLOAD.TO] Undertale - Megalovania-HQ.wav"
+dest_files=[ "res://.import/[MP3DOWNLOAD.TO] Undertale - Megalovania-HQ.wav-20b3bb45bbaf4a66020321469c6638a1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
