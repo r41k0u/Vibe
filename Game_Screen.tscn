@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game_Screen.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/images/heart.svg" type="Texture" id=9]
 [ext_resource path="res://HUD.gd" type="Script" id=10]
 [ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/music/ephemeral.mp3" type="AudioStream" id=12]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -78,6 +79,8 @@ position = Vector2( 508, 319 )
 script = ExtResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [node name="Emitter" type="Node2D" parent="."]
 script = ExtResource( 8 )

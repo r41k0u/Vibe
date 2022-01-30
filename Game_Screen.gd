@@ -5,6 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
+
 var window_size
 var items_to_center = []
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +22,7 @@ func _ready():
 	for item in items_to_center:
 		item.position.x = window_size.x/2
 		item.position.y = window_size.y/2
+	
 	pass # Replace with function body.
 
 func _process(delta):
