@@ -1,8 +1,17 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=2]
+[gd_resource type="AudioBusLayout" load_steps=3 format=2]
 
 [sub_resource type="AudioEffectSpectrumAnalyzer" id=1]
 resource_name = "SpectrumAnalyzer"
 
+[sub_resource type="AudioEffectReverb" id=2]
+resource_name = "Reverb"
+room_size = 0.79
+damping = 1.0
+hipass = 0.12
+dry = 0.0
+
 [resource]
 bus/0/effect/0/effect = SubResource( 1 )
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource( 2 )
+bus/0/effect/1/enabled = false

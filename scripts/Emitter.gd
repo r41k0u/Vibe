@@ -5,7 +5,7 @@ extends Node2D
 # var a = 2
 # var b = "text"
 export var min_delay = 0
-export var max_delay = 1
+export var max_delay = 0.5
 var delay = 2
 var obstacle = preload("res://utility_scenes/Obstacle.tscn")
 # Called when the node enters the scene tree for the first time.

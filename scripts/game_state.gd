@@ -19,10 +19,12 @@ func _ready():
 	pass # Replace with function body.
 
 func start_collect_mode():
+	AudioServer.set_bus_effect_enabled(0, 1, true)
 	mode = COLLECT
 	emit_signal("MODE_COLLECT")
 
 func start_shoot_mode():
+	AudioServer.set_bus_effect_enabled(0, 1, false)
 	mode = SHOOT
 	emit_signal("MODE_SHOOT")
 

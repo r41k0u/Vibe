@@ -13,10 +13,12 @@ config_version=4
 config/name="Vibe"
 run/main_scene="res://UI_scenes/Start_Screen.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://Vicon.ico"
 
 [autoload]
 
 GameState="*res://scripts/game_state.gd"
+Stamps="*res://scripts/stamps.gd"
 
 [input]
 

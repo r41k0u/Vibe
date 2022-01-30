@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game_Screen.gd" type="Script" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://assets/images/heart.svg" type="Texture" id=9]
 [ext_resource path="res://HUD.gd" type="Script" id=10]
 [ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://assets/music/ephemeral.mp3" type="AudioStream" id=12]
+[ext_resource path="res://utility_scenes/impact.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scripts/Circles.gd" type="Script" id=14]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -57,6 +60,9 @@ font_data = ExtResource( 11 )
 [node name="Game_Screen" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Circles" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 508, 320 )
 MAX_ORBIT_VELOCITY = 4
@@ -78,6 +84,8 @@ position = Vector2( 508, 319 )
 script = ExtResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [node name="Emitter" type="Node2D" parent="."]
 script = ExtResource( 8 )
@@ -134,6 +142,15 @@ texture = ExtResource( 9 )
 position = Vector2( 80, 50 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
+
+[node name="Impact" parent="HUD/SCORE/LIVES" instance=ExtResource( 13 )]
+position = Vector2( 19, 50 )
+
+[node name="Impact2" parent="HUD/SCORE/LIVES" instance=ExtResource( 13 )]
+position = Vector2( 49, 50 )
+
+[node name="Impact3" parent="HUD/SCORE/LIVES" instance=ExtResource( 13 )]
+position = Vector2( 80, 49 )
 
 [node name="TIMER" type="Node2D" parent="HUD"]
 
