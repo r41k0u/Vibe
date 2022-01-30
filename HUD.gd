@@ -11,7 +11,7 @@ var items_to_center = []
 var time_left = 30
 var life = 0
 onready var lives = [$SCORE/LIVES/heart3, $SCORE/LIVES/heart2, $SCORE/LIVES/heart1]
-
+onready var impacts = [$SCORE/LIVES/Impact3, $SCORE/LIVES/Impact2, $SCORE/LIVES/Impact]
 export (NodePath)var player_node
 
 var orbit_velocity
@@ -56,4 +56,5 @@ func _on_player_hit():
 		get_tree().change_scene("res://UI_scenes/End_Screen.tscn")
 	else:
 		lives[life].queue_free()
+		impacts[life].emitting = true
 		life += 1
