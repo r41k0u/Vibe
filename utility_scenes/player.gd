@@ -48,11 +48,12 @@ func _process(delta):
 	time = max(0, time)
 	if(stamp_ind < Stamps.time_stamps.size() && Stamps.time_stamps[stamp_ind] < time):
 		stamp_ind += 1
-		var b = bullet.instance()
-		b.position = $Player_motif.global_position
-		b.rotation = rotation
-		b.velocity = (global_position - $Player_motif.global_position)*2.5
-		get_parent().add_child(b)
+		if(GameState.mode == GameState.SHOOT):
+			var b = bullet.instance()
+			b.position = $Player_motif.global_position
+			b.rotation = rotation
+			b.velocity = (global_position - $Player_motif.global_position)*2.5
+			get_parent().add_child(b)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func player_hit():
