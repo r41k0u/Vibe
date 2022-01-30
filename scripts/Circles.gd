@@ -23,9 +23,9 @@ func _process(delta):
 		grow_for = BEAT_DURATION
 	
 	if(grow_for != 0):
-		radius = lerp(radius, MAX_RADIUS, 0.7)
+		radius = lerp(radius, MAX_RADIUS, 0.1)
 	else:
-		radius = lerp(radius, MIN_RADIUS, 0.7)
+		radius = lerp(radius, MIN_RADIUS, 0.1)
 	
 	#if(expanding):
 	#	radius = lerp(radius, MAX_RADIUS, 0.08)

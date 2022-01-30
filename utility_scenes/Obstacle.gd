@@ -24,6 +24,8 @@ func _ready():
 	var speed = rand_range(MIN_SPEED, MAX_SPEED)
 	velocity = Vector2(rand_range(-2, 2), rand_range(-2, 2))
 	velocity = velocity.normalized()*speed
+	position.x += velocity.x
+	position.y += velocity.y
 	
 	var index = randi()%$sprites.get_child_count()
 	for i in range($sprites.get_child_count()):
