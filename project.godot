@@ -13,6 +13,7 @@ config_version=4
 config/name="Vibe"
 run/main_scene="res://UI_scenes/Start_Screen.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://Vicon.ico"
 
 [autoload]
 
