@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://utility_scenes/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game_Screen.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/fonts/Montserrat-SemiBold.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://assets/music/ephemeral.mp3" type="AudioStream" id=12]
 [ext_resource path="res://utility_scenes/impact.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scripts/Circles.gd" type="Script" id=14]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -58,6 +59,9 @@ font_data = ExtResource( 11 )
 
 [node name="Game_Screen" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Circles" type="Node2D" parent="."]
+script = ExtResource( 14 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 508, 320 )

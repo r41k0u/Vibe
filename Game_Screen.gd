@@ -18,6 +18,7 @@ func _ready():
 	items_to_center.append($Emitter)
 	items_to_center.append($Camera2D)
 	items_to_center.append($HUD)
+	items_to_center.append($Circles)
 	window_size = get_viewport().size
 	for item in items_to_center:
 		item.position.x = window_size.x/2
