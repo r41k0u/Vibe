@@ -16,9 +16,11 @@ func _ready():
 	update()
 	pass # Replace with function body.
 
-func _process(delta):
+func _physics_process(delta):
 	grow_for = max(0, grow_for - delta)
-	while(stamp_ind < Stamps.time_stamps.size() && Stamps.time_stamps[stamp_ind] < Stamps.time):
+	var time = get_parent().get_node("AudioStreamPlayer").get_playback_position()
+	time = max(0, time)
+	if(Stamps.time_stamps[stamp_ind % Stamps.time_stamps.size()] < time && abs(time - Stamps.time_stamps[stamp_ind % Stamps.time_stamps.size()]) < 100):
 		stamp_ind += 1
 		grow_for = BEAT_DURATION
 	
@@ -27,14 +29,6 @@ func _process(delta):
 	else:
 		radius = lerp(radius, MIN_RADIUS, 0.1)
 	
-	#if(expanding):
-	#	radius = lerp(radius, MAX_RADIUS, 0.08)
-	#	if(radius > MAX_RADIUS-0.5):
-	#		expanding = false
-	#else :
-	#	radius = lerp(radius, MIN_RADIUS, 0.08)
-	#	if(radius < MIN_RADIUS+0.5):
-	#		expanding = true
 	update()
 
 func _draw():
