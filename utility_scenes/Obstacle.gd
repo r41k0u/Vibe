@@ -35,7 +35,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _process(delta):
+func _physics_process(delta):
 	grow_for = max(0, grow_for - delta)
 	### RESPONSIVE KA CODE
 	var new_window_size = get_viewport().size
@@ -48,8 +48,9 @@ func _process(delta):
 		queue_free()
 	if(!hit):
 		position += velocity*delta
-		
-	while(stamp_ind < Stamps.time_stamps.size() && Stamps.time_stamps[stamp_ind] < Stamps.time):
+	var time = get_parent().get_node("AudioStreamPlayer").get_playback_position()
+	time = max(0, time)
+	if(Stamps.time_stamps[stamp_ind % Stamps.time_stamps.size()] < time && abs(time - Stamps.time_stamps[stamp_ind % Stamps.time_stamps.size()]) < 100):
 		stamp_ind += 1
 		grow_for = BEAT_DURATION
 	
